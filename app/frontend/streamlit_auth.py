@@ -623,7 +623,7 @@ def profile_tab():
     
     # Logout button
     st.markdown("---")
-    if st.button("🚪 Logout", use_container_width=True):
+    if st.button("🚪 Logout", use_container_width=True, key="logout_auth"):
         logout_user()
 
 def policy_directory_tab():

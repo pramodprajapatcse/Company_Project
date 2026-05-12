@@ -1249,7 +1249,12 @@ def query_policy(question):
         else:
             st.error(f"Server error: {res.status_code}")
             return None
-    
+    except requests.exceptions.ConnectionError as e:
+        st.error(
+            f"Connection error: could not reach backend at {API_URL}. "
+            "Make sure the backend is running and API_URL is configured correctly."
+        )
+        return None
     except Exception as e:
         st.error(f"Connection error: {str(e)}")
         return None
