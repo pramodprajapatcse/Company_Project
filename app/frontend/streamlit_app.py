@@ -573,7 +573,7 @@ def show_auth_page():
     # Load company logo from local file
     try:
         # Update this path to your actual logo file location
-        logo_path = "images/company_logo.png"  # Change this to your logo path
+        logo_path = "/images/MAHINDRALOGO.jpeg"  # Change this to your logo path
         if os.path.exists(logo_path):
             company_logo = Image.open(logo_path)
         else:
